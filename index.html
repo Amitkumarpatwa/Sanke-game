@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-wrapper">
+            <div class="header-controls">
+                <h1>Snake Game</h1>
+                <button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="level-display">Level: <span id="currentLevel">-</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+            </div>
+            <div id="levelSelection" class="level-selection">
+                <h2>Choose Difficulty Level</h2>
+                <div class="level-buttons">
+                    <button class="level-btn easy" data-level="easy">
+                        <span class="level-icon">🐌</span>
+                        <span class="level-name">Easy</span>
+                        <span class="level-speed">Slow & Smooth</span>
+                    </button>
+                    <button class="level-btn intermediate" data-level="intermediate">
+                        <span class="level-icon">🚶</span>
+                        <span class="level-name">Intermediate</span>
+                        <span class="level-speed">Balanced</span>
+                    </button>
+                    <button class="level-btn hard" data-level="hard">
+                        <span class="level-icon">⚡</span>
+                        <span class="level-name">Hard</span>
+                        <span class="level-speed">Fast & Challenging</span>
+                    </button>
+                </div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="game-info">
+                <p class="instructions">Use arrow keys or swipe to control the snake</p>
+                <div class="game-buttons">
+                    <button id="startBtn" class="btn" style="display: none;">Start Game</button>
+                    <button id="pauseBtn" class="btn" style="display: none;">⏸️ Pause</button>
+                    <button id="changeLevelBtn" class="btn btn-secondary" style="display: none;">Change Level</button>
+                </div>
+            </div>
+            <div id="gameOver" class="game-over" style="display: none;">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <button id="restartBtn" class="btn">Play Again</button>
+            </div>
+            <div class="controls">
+                <div class="control-row">
+                    <button class="control-btn" id="upBtn">↑</button>
+                </div>
+                <div class="control-row">
+                    <button class="control-btn" id="leftBtn">←</button>
+                    <button class="control-btn" id="downBtn">↓</button>
+                    <button class="control-btn" id="rightBtn">→</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
